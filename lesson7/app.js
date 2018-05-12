@@ -102,7 +102,7 @@ function update(){
 
 	}
 	// allow layer to jump if player is touching the ground 
-	if(cursor.up.isDown && player.body.touching.down) {
+	if(cursors.up.isDown && player.body.touching.down) {
 		player.body.velocity.y = -300;
 	}
 }
