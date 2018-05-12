@@ -81,9 +81,9 @@ function create(){
 }
 
 function update(){
-	game.physics.collide(player, platforms);
-	game.physics.collide(stars, platforms);
-	game.physics.collide(enemy1, platforms);
+	game.physics.arcade.collide(player, platforms);
+	game.physics.arcade.collide(stars, platforms);
+	game.physics.arcade.collide(enemy1, platforms);
 
 	// reset a player's velocity if no events occur 
 	player.body.velocity.x = 0; 
