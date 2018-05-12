@@ -80,7 +80,7 @@ function create(){
 	cursors = game.input.keyboard.createCursorKeys(); 
 }
 
-function update() {
+function update(){
 	game.physics.collide(player, platforms);
 	game.physics.collide(stars, platforms);
 	game.physics.collide(enemy1, platforms);
