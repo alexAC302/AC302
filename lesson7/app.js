@@ -52,8 +52,8 @@ function create(){
 // starting cooridnatex x,y 
 player = game.add.sprite(32, 400, 'dude'); 
 // animations.add(name of animation, [frames for animation], frames per sec, truelfalse )
-player.animations.add('left', [0, 1, 2, 3], 10 true);
-player.animations.add('right', [5, 6, 7, 8], 10 true);
+player.animations.add('left', [0, 1, 2, 3], 10, true);
+player.animations.add('right', [5, 6, 7, 8], 10, true);
 game.physics.arcade.enable(player); 
 player.body.bounce.y = 0.2; 
 player.body.gravity.y = 300; 
@@ -62,8 +62,8 @@ player.body.collideWorldBounds = true;
 
 enemy1 = game.add.sprite(760, 20, 'baddie'); 
 // animations.add(name of animation, [frames for animation], frames per sec, truelfalse )
-enemy1.animations.add('left', [0, 1], 10 true);
-enemy1.animations.add('right', [2, 3], 10 true);
+enemy1.animations.add('left', [0, 1], 10, true);
+enemy1.animations.add('right', [2, 3], 10, true);
 game.physics.arcade.enable(enemy1); 
 enemy1.body.bounce.y = 0.2; 
 enemy1.body.gravity.y = 500; 
