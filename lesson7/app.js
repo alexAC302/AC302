@@ -77,8 +77,30 @@ for(var i = 0; i < 12; i++) {
 	star.body.bounce.y = 0.7 + Math.random() * 0.2;
 }
 
+cursors = game.input.keyboard.createCursorKeys(); 
 
+function update 
+	game.physics.collide(player, platforms);
+	game.physics.collide(stars, platforms);
+	game.physics.collide(enemy1, platforms);
 
+	// reset a player's velocity if no events occur 
+	player.body.velocity.x = 0; 
+
+	//program movement keys 
+	if(cursors.left.isDown) {
+		//move left 
+		player.body.velocity.x = -150; 
+		player.animations.play('left');
+		else if(cursors.right.isDown)
+		player.body.velocity.x = 150; 
+		player.animations.play('right');
+		else {
+		player.animations.stop(); 
+		player.frame = 4; 
+
+		}
+	}
 }
 
 function update(){
